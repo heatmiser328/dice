@@ -12,6 +12,26 @@ public class DiceResource {
         return getResources().getIdentifier(name, null, getPackageName());
 	}
 	*/
+
+	public static int getDieResource(DieColor color, int die) {
+        switch (color) {
+            case WHITE_BLACK:
+                return getWhiteBlackDieResource(die);
+            case RED_WHITE:
+                return getRedWhiteDieResource(die);
+            case BLACK_WHITE:
+                return getBlackWhiteDieResource(die);
+            case BLACK_RED:
+                return getBlackRedDieResource(die);
+            case BLUE_WHITE:
+                return getBlueWhiteDieResource(die);
+            case GREEN_WHITE:
+                return getGreenWhiteDieResource(die);
+            case YELLOW_BLACK:
+                return getYellowBlackDieResource(die);
+        }
+        return -1;
+    }
     
 	public static int getWhiteBlackDieResource(int die) {
 		switch(die) {

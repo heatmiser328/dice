@@ -1,6 +1,10 @@
 package com.ica.dice;
 
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import java.util.*;
+
 
 public class Dice {
 	private ArrayList<Die> dice = new ArrayList<Die>();
@@ -63,4 +67,16 @@ public class Dice {
 		for (Die die : dice)
 			die.roll();
 	}
+    
+    public void set(int die, DieColor color, ImageView view) {
+        int res = DiceResource.getDieResource(color, getDie(die));
+        view.setImageResource(res);
+    }
+    public void set(int die, TextView view) {
+        view.setText(Integer.toString(getDie(die)));
+    }
+
+    public void set(int die, Polygon view) {
+        view.setText(Integer.toString(getDie(die)));
+    }
 }

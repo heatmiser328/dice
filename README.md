@@ -1,4 +1,0 @@
-dice
-====
-
-dice with shapes
